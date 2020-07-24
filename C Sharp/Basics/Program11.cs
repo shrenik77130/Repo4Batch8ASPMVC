@@ -43,6 +43,18 @@ Ass1: WAP to create array of name of 10 cities. Some city name keep empty. and s
      Q2. Print cities which are duplicates
      Q3. Print count of cities begins with any vowel
 
+     string []cities = {"sangli","","kolhapur};
+
+     for(int i=0;i<cities.length;i++)
+     {
+         if(cities[i].Equals(""))
+         {
+             cnt++;
+         }
+     }
+
+
+
 Ass2: WAP to input array of 5 integer numbers. Sort in Ascending Order.
 
 */
