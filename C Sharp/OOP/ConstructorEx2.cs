@@ -4,7 +4,6 @@
 using System;
 namespace TestNamespace
 {
-
     class Area
     {
         public float rad,bs,ht,side;
