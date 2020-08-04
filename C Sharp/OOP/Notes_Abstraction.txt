@@ -1,0 +1,112 @@
+Constructor
+-----------------
+
+
+	-> Constructor is a special member function which has same name as its classname
+	-> Constructor used to define the default dimentions of class attributes
+	-> Constructor must be public
+	-> Two Types
+
+		a. Default
+			Constructor having no arguments
+
+		b. Parameterized
+			Constructor having arguments
+	
+		Note:
+		-> Constructor may have any number of parameters
+		-> In Class, You can create any number of parameterized Constructor
+		   but only one Default Constructor
+
+
+Inheritance
+--------------------
+
+	-> Inheritance is ability of one class to access members of another class
+	-> Syntax:
+
+
+
+			class Person
+			{
+				public string personname;
+				public string gender;
+				public int age;
+				public float weight;
+				public float height;
+			}
+
+				class Employee : Person
+				{
+					public int empcode;
+					public double salary;
+					public string company;
+					public string location;
+				}
+
+				class Student : Person
+				{
+					public int rollno;
+					public string class;
+					public string batch;
+				}
+			
+				class Xyz : Person  {}
+
+		-> Types
+
+			a. public		: Subclass + object of subclass can access parent class
+			b. private		: Subclass only can access public of parent class. 
+			c. protected		: Subclass only can access public + protected parent class.
+
+
+Abstraction
+---------------------
+
+		3 Locations Trip 20+
+		-----------------
+		-> Himalaya + Kolkata + Kanya Kumari
+		
+
+		Route, Lunch, Breakfast, Stay, Traveling
+		
+		interface Route
+		{
+			int routeid;
+			string routename;
+			string landmark;
+
+			// Compulsory to override
+			public void createRoute();
+			public void showRoute();
+		}
+	
+		abstract class Lunch
+		{
+			// Optional to Override
+			public void takeLunch(){}
+	
+			// Compulsory to override
+			public abstract void defineLunch();
+		}
+
+		public Passenger : Route, Lunch, Breakfast, Stay, Traveling
+		{
+			...
+			createPassenger();
+			confirmPassenger();
+			showPassenger();
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+		
