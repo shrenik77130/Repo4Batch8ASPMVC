@@ -7,12 +7,12 @@ namespace Entity
 {
     public class Employee
     {
-        private int empcode { get; set; }
-        private string empname { get; set; }
+        public int empcode { get; private set; }
+        public string empname { get; private set; }
 
-        private double salary { get; set; }
+        public double salary { get; private set; }
 
-        private string deptname { get; set; }
+        public string deptname { get; private set; }
 
         public Employee() { }
 

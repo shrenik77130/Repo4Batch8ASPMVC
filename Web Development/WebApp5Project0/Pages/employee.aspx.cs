@@ -13,10 +13,19 @@ namespace WebApp5Project0
     {
         protected bool saveStatus = false;
         protected bool saveFailedStatus = false;
+        protected EmployeeService employeeService;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(IsPostBack==false)
+            {
+                employeeService = new EmployeeService();
+                ViewState["employeeService"] = employeeService;
+            }
+            else
+            {
+                employeeService = (EmployeeService)ViewState["employeeService"];
+            }
         }
 
         protected void btnSaveEmployee_Click(object sender, EventArgs e)
@@ -29,7 +38,6 @@ namespace WebApp5Project0
                     double.Parse(txtSalary.Value),
                     txtDepartment.Value);
 
-                EmployeeService employeeService = new EmployeeService();
 
                 if (employeeService.SaveEmployee(employee) != null)
                     saveStatus = true;
@@ -41,6 +49,9 @@ namespace WebApp5Project0
                 Session["error"] = ex;
                 Response.Redirect("error.aspx");
             }
+
+            
+
         }
     }
 }

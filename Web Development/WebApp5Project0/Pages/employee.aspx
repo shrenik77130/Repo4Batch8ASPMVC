@@ -9,60 +9,97 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <% if (saveStatus == true)
-            {%>
-        <div class="row m-1">
-            <div class="col-md-4">
+        <div class="container-sm">
+            <h1 class="m-1 text-primary">Employee Create</h1>
 
-                <div class="alert alert-success" role="alert">
-                    Employee Save Successfull
+            <div class="row">
+                <div class="col-md-4">
+                    <% if (saveStatus == true)
+                        {%>
+                    <div class="row m-1">
+                        <div class="col-md-12">
+
+                            <div class="alert alert-success" role="alert">
+                                Employee Save Successfull
+                            </div>
+
+                        </div>
+                    </div>
+                    <%}
+                        else if (saveFailedStatus == true)
+                        {%>
+                    <div class="row m-1">
+                        <div class="col-md-12">
+
+                            <div class="alert alert-danger" role="alert">
+                                Faild to save Employee Record
+                            </div>
+
+                        </div>
+                    </div>
+                    <%} %>
+
+                    <div class="row m-1">
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Employee Id" id="txtEmpId" class="form-control" runat="server" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="row m-1">
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Employee Name" id="txtEmpName" class="form-control" runat="server" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="row m-1">
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Salary" id="txtSalary" class="form-control" runat="server" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="row m-1">
+                        <div class="col-md-12">
+                            <input type="text" placeholder="Department" id="txtDepartment" class="form-control" runat="server" required="required" />
+                        </div>
+                    </div>
+
+                    <div class="row m-1">
+                        <div class="col-md-12">
+                            <input type="submit" value="Save" id="btnSaveEmployee" class="btn btn-primary" runat="server" onserverclick="btnSaveEmployee_Click" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Emp Code</th>
+                                <th>Emp Name</th>
+                                <th>Department</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <% LinkedList<Entity.Employee> empTable = employeeService.ListEmployee(); %>
+                            <% for (int i = 0; i < empTable.Count; i++) {
+                                    Entity.Employee emp = (Entity.Employee)empTable.ElementAt(i);
+                                    %>
+                            <tr>
+                                <td><%= emp.empcode %></td>
+                                <td><%= emp.empname %></td>
+                                <td><%= emp.deptname %></td>
+                                <td><%= emp.salary %></td>
+                            </tr>
+                            <%} %>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>
         </div>
-        <%}
-            else if(saveFailedStatus==true)
-            {%>
-        <div class="row m-1">
-            <div class="col-md-4">
 
-                <div class="alert alert-danger" role="alert">
-                    Faild to save Employee Record
-                </div>
-
-            </div>
-        </div>
-        <%} %>
-
-        <div class="row m-1">
-            <div class="col-md-4">
-                <input type="text" placeholder="Employee Id" id="txtEmpId" class="form-control" runat="server" />
-            </div>
-        </div>
-
-        <div class="row m-1">
-            <div class="col-md-4">
-                <input type="text" placeholder="Employee Name" id="txtEmpName" class="form-control" runat="server" />
-            </div>
-        </div>
-
-        <div class="row m-1">
-            <div class="col-md-4">
-                <input type="text" placeholder="Salary" id="txtSalary" class="form-control" runat="server" />
-            </div>
-        </div>
-
-        <div class="row m-1">
-            <div class="col-md-4">
-                <input type="text" placeholder="Department" id="txtDepartment" class="form-control" runat="server" />
-            </div>
-        </div>
-
-        <div class="row m-1">
-            <div class="col-md-4">
-                <input type="submit" value="Save" id="btnSaveEmployee" class="btn btn-primary" runat="server" onserverclick="btnSaveEmployee_Click" />
-            </div>
-        </div>
     </form>
 </body>
 </html>
