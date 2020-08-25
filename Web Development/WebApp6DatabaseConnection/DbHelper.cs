@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace WebApp6DatabaseConnection
 {
-    
+ 
     public class DbHelper
     {
         public SqlConnection conn;
