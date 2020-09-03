@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="masterpage.master.cs" Inherits="masterpage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <style>
+        li {
+            border:1px solid;
+            background-color: orange;
+            display:inline;
+            margin-right:25px;
+            padding:5px;
+        }
+
+            li:hover {
+                background-color:white;
+            }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <div style="border:1px solid;height:150px;background-color:skyblue;">
+            <h1 style="text-align:center">ABC Company</h1>
+        </div>
+
+        <div style="margin-top:10px;border:1px solid;height:auto;background-color:skyblue;">
+            <ul>
+                <a href="Home.aspx"> <li>Home</li></a>
+                <a href="SignIn.aspx"> <li>Sign In</li></a>
+                <a href="#"> <li>Sign Up</li></a>
+                <a href="#"> <li>Staff</li></a>
+                <a href="#"> <li>Gallery</li></a>
+            </ul>
+        </div>
+
+        <div style="margin-top:10px;  border:1px solid;height:500px;">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div style="margin-top:10px; border:1px solid;height:auto;background-color:skyblue;">
+            <p style="color:gray;">This website updated on 14th Jan 2019 | Contact : 1800 7645</p>
+        </div>
+
+    </form>
+</body>
+</html>

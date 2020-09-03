@@ -1,0 +1,22 @@
+﻿body {
+    background-color:yellow;
+}
+
+
+ul {
+    margin:10px;
+    padding:10px;
+    background-color:blue;
+}
+
+li {
+    margin-right:10px;
+    border:1px solid white;
+    list-style:none;
+    display:inline;
+}
+
+    li:hover {
+        color:white;
+        font:20px bold "comic sans ms";
+    }

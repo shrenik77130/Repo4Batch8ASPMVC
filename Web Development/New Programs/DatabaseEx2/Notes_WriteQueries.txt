@@ -1,0 +1,94 @@
+MySQL Schemas:	
+	MySQL Schemas are Database objects. In Which you can add Tables, Views, Stored Procedures,
+ 	functions, Triggers etc.
+
+Table:
+	Table is a set of number of rows and columns
+	Each Column setup with perticular attributes
+
+	Columns Attributes
+	1. Primary Key Column
+		In Such Column Null and Duplications not allowed
+	2. ForeignKey Column
+		Referenced Column from its Parent Table
+	3. Auto Generated Column
+		Values not to be inserted by user. Column calulates any expression depending on
+		some other columns is called as Auto generated Column
+	4. Default Collumn
+		These Columns have default value, if any value insert to such columns then it can be 
+		override
+
+	Query to Create Table
+
+	CREATE TABLE tablename
+	(
+		colname	datatype	col_attribute,
+		colname	datatype	col_attribute,
+		colname	datatype	col_attribute,
+		.
+		.
+	)
+	
+
+	e.g.
+	
+	CREATE TABLE StudentData
+	(
+		rollno		INT PRIMARY KEY,
+		studname	VARCHAR(20),
+		gender		VARCHAR(20),
+		dob		DATE,
+		age		INT		
+	)
+
+Operations on Tables
+	
+	1. Insert 
+		// Inserting Values in all Columns
+		INSERT INTO tablename VALUES(par1,par2,par3,...)
+
+		e.g.
+		INSERT INTO StudentData VALUES(101,'Mahesh','Male','1991/5/20',27)
+		
+		// Inserting values in Selective Columns
+		INSERT INTO tablename(col1,col2) VALUES(par1,par2)
+
+		e.g.
+		INSERT INTO StudentData(rollno,studname) VALUES(103,'Mayur')
+
+		// Inserting Multiple Values in all Columns
+		INSERT INTO tablename VALUES(par1,par2,par3,...),(par1,par2,par3,...),
+			(par1,par2,par3,...),(par1,par2,par3,...)
+
+		e.g.
+		INSERT INTO StudentData VALUES(105,'Nilesh','Male','1995/8/15',23), 
+			(106,'Omkar','Male','1999/7/8',19),
+			(107,'Akash','Male','2002/7/8',16)
+				
+	2. Update
+		UPDATE tablename SET col1 = value , col2 = value, col3 = value, . . . . . 
+			WHERE colname = value
+	
+		e.g.
+		UPDATE StudentData set studname = 'Yogesh', dob='1999/7/8' WHERE rollno = 102
+	3. Delete
+		DELETE FROM tatblename WHERE colname = value
+
+		e.g.
+		DELETE FROM StudentData WHERE rollno = 105
+		
+		DELETE FROM StudentData // will delete all records from Table		
+	4. Select
+		// Select all columns
+		SELECT *FROM tablename			
+
+		e.g.
+		SELECT *FROM StudentData
+
+		// Select specific Columns
+		SELECT col1,col2,. . .  FROM tablename
+	
+		e.g.		
+		SELECT rollno, studname, gender FROM StudentData
+
+				

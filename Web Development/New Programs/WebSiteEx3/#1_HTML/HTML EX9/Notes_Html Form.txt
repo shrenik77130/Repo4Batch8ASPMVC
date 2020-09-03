@@ -1,0 +1,49 @@
+form tag 
+---------------------
+
+	form tag used to send html Data to Server
+
+	form tag attributes
+	1. action 
+		Action Used to Specify Where to send the Data
+
+
+	2. method
+
+		Method used to Define Which way send data
+
+		Two ways
+		A. Using Query String
+		B. By encrypt the Html Data in Single Object
+
+		/* form tag will briefly discuss in Server Side Language
+		   e.g. Node Js, Php, Jsp, Asp etc. */
+	
+
+Form Controls in Html
+---------------------------------
+
+	<input></input> used to Create Form Control
+
+	Text Data 		: input type = "text"
+	Number			: input type = "number"
+	Date			: input type = "date"
+	Time			: input type = "time"
+	emailid			: input type = "email"
+	password		: input type = "password"
+	file			: input type = "file"
+	Option			: input type = "radio"
+	Check Box		: input type = "checkbox"
+	Dropdown		: <select>    <option>A</option>   <option>B</option>   ..   </select>
+	Button			: input type = "button"
+
+
+
+
+
+
+
+
+
+
+

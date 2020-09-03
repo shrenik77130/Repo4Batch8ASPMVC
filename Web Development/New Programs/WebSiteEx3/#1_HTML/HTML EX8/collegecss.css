@@ -1,0 +1,26 @@
+p
+{
+	font-family: calibri;
+	font-color:gray;
+	font-size:20px;
+}
+
+h4:hover,h3:hover
+{
+	color:white;
+	background-color: black;
+}
+
+body
+{
+	background-color:#B7EBF9;
+
+	-webkit-transition:background-color 5s;
+}
+
+body:hover
+{
+	background-color:#245D85;
+
+}
+

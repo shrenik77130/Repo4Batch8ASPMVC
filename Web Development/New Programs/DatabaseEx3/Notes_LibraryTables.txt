@@ -1,0 +1,51 @@
+Library Books, Students, Librarian
+	
+Number of Librarian
+Number of Readers/Students
+Number of Books
+
+
+BookType
+	booktypeid, booktype
+
+	booktypeid	booktype
+	1		Science
+	2		Commerce
+	3		Novels	
+	4		Articles
+	5		Magazines
+	
+Publications
+	publicationid, publication_name
+
+	publicationid		publication_name
+	1			Pragatee publications
+	2			Hindustan publications
+	
+Auther
+	autherid, fname,mname,lname,gender,dob,qualification,photo
+
+	autherid	fname	mname	lname	gender	dob	qualification	photo
+	1	Yashwant 	Kanetkar	male	9/3/1980	BE (Comp)	<binary>
+	2	John 		Smith	male	9/2/1976	PHD		<binary>
+
+
+Book
+	bookid,fkbooktypeid,bookname,fkautherid,fkpublicationid
+
+	bookid	fkbooktypeid	bookname	fkautherid	fkpublicationid
+	1	2		Finanace		1		2
+	2	1		Physics		2		1
+
+
+Librarian
+	librarianid, joindate,fname,mname,lname,gender,dob,address,contactno,education,photo,username,password
+
+Student	
+	studentid, admndate,fname,mname,lname,gender,dob,address,contactno,education,photo
+
+BookMaster
+	bookmasterid, date, fklibrarianid, fkstudentid, fkbookid, due_date, fees
+
+
+

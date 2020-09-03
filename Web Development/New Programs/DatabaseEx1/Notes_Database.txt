@@ -1,0 +1,60 @@
+ASP.NET
+
+
+	Language : C#	OOP , Exception Handling, IO, MultiThreading
+
+	Technology :	a. Client Side 	 -> Html, Css, JavaScript, BootStrap 
+					 -> Angular Framework
+
+			b. Server Side	-> Asp
+					-> .Net + Web Publishing Tool (IIS)
+
+	IDE Software : 	Visual Studio
+
+	Database	: 	SQL Server
+
+	Database IDE/Workbench/Management Studio
+
+
+Database:
+	Database means to structurize and relationally handle the records
+
+	"SQL" is Programming langauge used to build Database
+	
+
+	Following are the Databases tools to create Database
+
+	Types
+	A. OLTP Database
+		-> Online Transaction Processing
+		-> MS Access, MySQL , SQL Server, Oracle
+
+		Languages Recommended : Asp, Jsp, Php
+
+	B. OLAP Database
+		-> Online Application Processing
+		-> SAP-HANA
+
+	C. NO SQL Database
+		-> Not Only SQL
+		-> Mongo Db, Cassandra, H Base, Oracle
+
+		Languages Recommended :	Node Js, Python, Ruby
+	
+
+	SQL Server Database Version: 2012 , 2014, 2017 
+
+	Download from  : 
+
+
+
+
+
+
+
+
+
+
+
+
+

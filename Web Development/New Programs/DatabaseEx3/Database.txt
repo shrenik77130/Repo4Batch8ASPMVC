@@ -1,0 +1,44 @@
+Flight Booking Statements
+--------------------------------
+
+	Login
+	------------
+	loginid, username, password
+	
+	FlightType
+	-------------
+	flighttypeid, flighttype
+	
+	Flight
+	--------
+	flightid, fkflightid, flightcode, flightname, seats
+	
+	Cities
+	-------
+	cityid, cityname
+	
+	Airports
+	--------
+	airportid, fkcityid, airportname, pincode, contactno
+	
+	TimeTable
+	----------
+	ttableid, date, fkflightid, fkairportid_from,fkairportid_to, dep_time, arr_time, distance, estimate_time,
+	tickitprice
+	
+	
+	Passenger
+	----------
+	passid, date, passportno, fname, mname, lname, gender, dob, age, photo
+	
+	
+	BookingMaster
+	-------------
+	bmasterid, date, fkpassid, fkttableid
+	
+	
+	
+	
+	
+	
+	

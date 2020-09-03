@@ -1,0 +1,25 @@
+Digital Marketing
+---------------------------------------------------------
+	
+	Login
+	loginid, username, password
+
+	SocialAccounts
+	socialaccid, accountname
+
+	Client
+	clientid, client_name,contactno1,cotactno2,emailid,website
+
+	ClientDetails
+	clientdetailid, fkclientid, fksocialaccid, url
+
+	MarketingType
+	mkttypeid, type
+
+	MarketingMaster
+	mmasterid, created_date, fkmkttypeid,fksocialaccid , duratiion, price, due_date 
+
+	Order
+	orderid, order_date, fkclient, fkmmasterid, status
+					
+	

@@ -1,0 +1,6 @@
+C:\Students\C#.Net_Batch6\DatabaseApp1\DatabaseApp1\bin\Debug\DatabaseApp1.exe.config
+C:\Students\C#.Net_Batch6\DatabaseApp1\DatabaseApp1\obj\Debug\DatabaseApp1.csprojResolveAssemblyReference.cache
+C:\Students\C#.Net_Batch6\DatabaseApp1\DatabaseApp1\bin\Debug\DatabaseApp1.exe
+C:\Students\C#.Net_Batch6\DatabaseApp1\DatabaseApp1\bin\Debug\DatabaseApp1.pdb
+C:\Students\C#.Net_Batch6\DatabaseApp1\DatabaseApp1\obj\Debug\DatabaseApp1.exe
+C:\Students\C#.Net_Batch6\DatabaseApp1\DatabaseApp1\obj\Debug\DatabaseApp1.pdb
